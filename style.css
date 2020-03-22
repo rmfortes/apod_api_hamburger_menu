@@ -4,19 +4,20 @@
 
 body {
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     max-width: 100%;
+    max-height: 100%;
     margin: auto;
 }
 
 header {
-    height: fit-content;
     width: 100vw;
     max-width: 100%;
     display: flex;
     justify-content: space-between;
     border: solid red;
     align-items: center;
+    position: fixed;
 }
 
 h1 {
@@ -54,15 +55,21 @@ h1 {
     border: solid red;
     width: fit-content;
     grid-column: 3/span 1;
+    height: 100vh;
   }
 
-  .dateandpic {
+  .menuContents {
+      margin-top: 9vh;
+      padding: 70px;
       border: solid red;
   }
 
+  .dateandpic {
+      margin: auto;
+  }
+
   footer {
-    bottom: 0px;  
-    position: fixed;
+    border: solid red;
   }
 
   
