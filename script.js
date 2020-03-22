@@ -1,7 +1,7 @@
 const url = 'https://api.nasa.gov/planetary/apod?api_key=xjgFw6a1av9NLLfgqi1a6AfHLlaGQxYw9LwMuUoW'
 const newUrl = 'https://api.nasa.gov/planetary/apod/ap' //will need to concatenated so that what follows is the date yymmdd.html (ex. ap190323.html for march 23, 2019)
 
-let spacePic = document.querySelector(".APOD")
+let dateandpic = document.querySelector(".dateandpic")
 let button = document.querySelector(".button"); //selects the button to which you want to add functionality.
 
 
@@ -19,8 +19,7 @@ fetch(url, {
 fetch(url)
     .then(res => res.json()) //this part gets the data, then converts it to json
     .then(res => { //we have the data! Now what are we going to do with it? 
-        spacePic.setAttribute(res.url); //here goes the variable the data will affect. 
-        spacePic.setAttribute("")
+        dateandpic.innerHTML=res.url;
         console.log(res);//browser will log the fetched data
     })
 
