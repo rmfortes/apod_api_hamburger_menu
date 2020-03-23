@@ -10,9 +10,6 @@ let visuals = document.querySelector(".visuals")
 let menu = document.querySelectorAll("aside");
 let toggleNavStatus = false;
 
-
-
-
 let handleClick = (e) => {
     e.preventDefault();
     console.dir(e);
@@ -20,6 +17,15 @@ let handleClick = (e) => {
     fetch(url)
         .then(res => res.json())
         .then(res => {
+            if (res.media_type = "video") {
+                let ifrm = document.createElement("iframe");
+                ifrm.setAttribute("src", res.url);
+                visuals.appendChild(ifrm);
+            } else {
+                let pic = document.createElement("image");
+                pic.setAttribute("src", res.url)
+                visuals.appendChild(pic);
+            }
             date.innerHTML = res.date;
             explanation.innerHTML = res.explanation;
             visuals.setAttribute("src", res);
@@ -52,32 +58,3 @@ let handleSubmit = (e) => {
 
 let inputElement = document.querySelector(".input");
 inputElement.addEventListener("submit", handleSubmit);
-
-
-
-// let gallery = document.querySelector(".js-gallery");
-// let images = document.querySelectorAll(".js-gallery-item");
-
-// let slideCount = 4;
-// let slideWidth = images[0].getBoundingClientRect();
-// let currentSlide = 1;
-// let width = slideWidth.width;
-// let delta = (-width * currentSlide);
-
-// function transitionSlide() {
-
-//     delta = (-width * currentSlide);
-//     console.log(delta)
-//     console.log(currentSlide)
-//     console.log(slideCount)
-
-//     if (currentSlide < slideCount) {
-//       gallery.style.transform = `translateX(${delta}px)`;
-//       currentSlide++;
-//     }
-//     else {
-//       gallery.style.transform = `translateX(0px)`;
-//       currentSlide = 1;
-//     }
-//   }
-// setInterval(transitionSlide, 2000);
