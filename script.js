@@ -8,6 +8,10 @@ let date = document.querySelector(".date");
 let visuals = document.querySelector(".visuals")
 
 let menu = document.querySelectorAll("aside");
+let toggleNavStatus = false;
+
+
+
 
 let handleClick = (e) => {
     e.preventDefault();
@@ -35,15 +39,15 @@ let handleSubmit = (e) => {
     console.dir(e);
 
     fetch(fullUrl)
-    .then(res => res.json())
-    .then(res => {
-        dateandpic.innerHTML = res;
-        console.log(res);
-    })
+        .then(res => res.json())
+        .then(res => {
+            dateandpic.innerHTML = res;
+            console.log(res);
+        })
 
-    .catch(err => {
-        console.log("Ground control to Major Tom?", err);
-    })
+        .catch(err => {
+            console.log("Ground control to Major Tom?", err);
+        })
 }
 
 let inputElement = document.querySelector(".input");
