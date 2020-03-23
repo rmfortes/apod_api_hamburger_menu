@@ -4,6 +4,7 @@ body {
     max-width: 100%;
     max-height: 100%;
     margin: auto;
+    background:#efe6f2
 }
 
 header {
@@ -11,38 +12,36 @@ header {
     max-width: 100%;
     display: flex;
     justify-content: space-between;
-    border: solid red;
+    background-color: black;
     align-items: center;
     position: fixed;
 }
 
 h1 {
-    border: solid red;
+    color: white;
     height: fit-content;
     width: fit-content;
     margin-left: 20px;
 }
 
 .menuButton {
-    border: solid black;
     align-items: flex-end;
     height: fit-content;
     width: fit-content;
     margin-right: 20px;
+    color: white;
 }
 
 .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
-    background-color: red;
     margin: 2px 0;
-    transition: 0.4s;
-    border: solid red;
+    background-color: white;
   }
 
 .button {
-    border: solid red;
     display: flex;
+    overflow: hidden;
 }
 
 .mainContent {
@@ -53,24 +52,33 @@ h1 {
   }
 
   aside {
-    border: solid red;
+    background-color: black;
     width: fit-content;
     grid-column: 3/span 1;
     height: 100vh;
   }
 
   .menuContents {
-      margin-top: 9vh;
-      padding: 70px;
-      border: solid red;
+    position: fixed;  
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 75px;
+    white-space: nowrap;
+    background-color: black;
+    color: white;
+    font-family: futura;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  .buttons {
+    margin-top: 200px;  
+    border: solid red;
   }
 
   .dateandpic {
       margin: auto;
-  }
-
-  footer {
-    border: solid red;
   }
 
   
