@@ -4,7 +4,7 @@ body {
     max-width: 100%;
     max-height: 100%;
     margin: auto;
-    background:#efe6f2
+    background: linear-gradient(#F3B5A7, #A7DBF3)
 }
 
 header {
@@ -12,13 +12,13 @@ header {
     max-width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background-color: #444241;
     align-items: center;
     position: fixed;
 }
 
 h1 {
-    color: white;
+    color:#F2EDE8;
     height: fit-content;
     width: fit-content;
     margin-left: 20px;
@@ -38,7 +38,7 @@ h1 {
   }
 
 aside {
-    background-color: black;
+    background-color: #444241;
     grid-column: 3/span 1;
     height: 100vh;
     visibility: hidden;
@@ -51,8 +51,8 @@ aside {
     bottom: 0;
     height: 100vh;
     white-space: nowrap;
-    background-color: black;
-    color: white;
+    background-color: #444241;
+    color:#F2EDE8;
     font-family: futura;
     overflow: hidden;
 }
@@ -73,9 +73,22 @@ aside {
     width: 35px;
     height: 5px;
     margin: 2px 0;
-    background-color: white;
+    background-color: #F2EDE8;
+    border-radius: 25px
   }  
 
 .belly {
   display: flex;
+}
+
+.date {
+    margin-top: 150px;
+    font-family: futura, sans-serif;
+    font-size: 70px;
+    color: #F2EDE8
+}
+
+.explanation {
+    font-family: futura, sans-serif;
+    color: #444241
 }
