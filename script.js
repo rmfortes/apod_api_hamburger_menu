@@ -1,25 +1,25 @@
 const url = 'https://api.nasa.gov/planetary/apod?api_key=xjgFw6a1av9NLLfgqi1a6AfHLlaGQxYw9LwMuUoW'
 const newURL = 'https://api.nasa.gov/planetary/apod?api_key=xjgFw6a1av9NLLfgqi1a6AfHLlaGQxYw9LwMuUoW&date='
 
-
+//each element
 let explanation = document.querySelector(".explanation");
 let todaybutton = document.querySelector(".todaybutton");
 let date = document.querySelector(".date");
 let visuals = document.querySelector(".visuals");
 let userInput = document.querySelector(".input").value;
+let aside = document.querySelector("aside");
 
-let menu = document.querySelectorAll("aside");
 
 let menuClick = (e) => {
     e.preventDefault();
     e.target.menuButton;
     console.dir(e);
 
-    for (let i=0; i<menu.length; i++) {
-        menu[i].style.visibility = "visible";
-        menu[i].style.width = "350px";
-    }
-
+    if (aside.style.display === "none") {
+        aside.style.display = "block";
+      } else {
+        aside.style.display = "none";
+      } 
 }
 
 let menuButton = document.querySelector(".menuButton");

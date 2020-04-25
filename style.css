@@ -5,8 +5,8 @@ body {
 }
 
 header {
-    height: 10vh;
-    width: 100vw;
+    height: 5vh;
+    min-width: 100vw;
     max-width: 100%;
     display: flex;
     justify-content: space-between;;
@@ -24,35 +24,37 @@ header {
     color: #444241
 }
 
-.formatting {
+.menuButton:hover {
+    color: #F2EDE8;
+}
+
+/* .formatting {
     margin: auto;
     height: 500px;
     width: fit-content;
-    border: solid red
-}
+} */
 
-.mainContent {
+/* .mainContent {
     display: grid;
     grid-template-rows: 6fr;
     grid-template-columns: 6fr;  
     height: 100%;
-    border: solid red;
-}
+} */
 
 
 aside {
-    height: 100vh;
-    visibility: hidden;
-    position: fixed;
+    width: 300px;
+    position: relative;
     right: 0px;
-    border-left: 1px solid #F2EDE8;
+    border-left: 10px solid #F2EDE8;
+    display: inline-block;
 }
 
 .menuContents {
     margin-top: 200px;
     border: solid red;
     width: fit-content;
-
+    display: block
 }
 
 .bar1, .bar2, .bar3 {
@@ -64,7 +66,6 @@ aside {
   }  
 
 .date {
-    margin-top: 150px;
     font-family: futura, sans-serif;
     font-size: 70px;
     color: #F2EDE8
@@ -81,5 +82,4 @@ aside {
 
 .visuals {
     width: 250px
-    border: solid red;
 }
