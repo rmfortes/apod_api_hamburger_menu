@@ -1,54 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Project 3</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <h1>APOD API</h1>
-        <div class="menuButton">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
+      <p>APOD API</p>
+      <div class="menuButton">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
     </header>
 
     <div class="mainContent">
-            <div class="date">
+      <div class="formatting">
+        <div class="date"></div>
 
-            </div>
-            
-            <div class="visuals">
+        <div class="title">
+          placeholder title
+        </div>
 
-            </div>
+        <div class="visuals"></div>
 
-            <div class="explanation">
+        <div class="explanation"></div>
+      </div>
 
-            </div>
-        
-        <aside>
-            <div class="menuContents">
-                <div class="buttons">
-                    <button class="todaybutton">today.
-                    </button>
-                </div>
-                <form>
-                    <input type="text" class="input" placeholder="YYYY-MM-DD">
-                </form>
-                <p>note: the APOD started on june 16, 1995. <br>searches for dates prior yield nothing.</p>
-            </div>
-        </aside>
+      <aside>
+          <form class="menuContents">
+            <input type="submit" class="input" value="Today">
+            <br><input type="submit" class="input" value="March 2, 2020">
+            <br><input type="text" class="input" placeholder="YYYY-MM-DD" />
+            <input type="submit" class="input" value="Go">
+          </form>
+      </aside>
     </div>
     <footer></footer>
 
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>
