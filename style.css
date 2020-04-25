@@ -12,7 +12,8 @@ header {
     align-items: center;
     position: fixed;
     border-bottom: 1px solid #F2EDE8;
-    font-family: futura, sans-serif
+    font-family: futura, sans-serif;
+    z-index: 1
 }
 
 .menuButton {
@@ -27,19 +28,6 @@ header {
 
 /* .menuButton:hover {
     color: #F2EDE8;
-} */
-
-/* .formatting {
-    margin: auto;
-    height: 500px;
-    width: fit-content;
-} */
-
-/* .mainContent {
-    display: grid;
-    grid-template-rows: 6fr;
-    grid-template-columns: 6fr;  
-    height: 100%;
 } */
 
 
@@ -70,21 +58,10 @@ aside {
     border-radius: 25px
   }  
 
-.date {
-    font-family: futura, sans-serif;
-    font-size: 70px;
-    color: #F2EDE8
-}
-
-.title {
-    color: gray
-}
-
-.explanation {
-    font-family: futura, sans-serif;
-    color: #444241;
-}
-
-.visuals {
-    width: 250px
+.apod {
+    border: solid red;
+    position: fixed;
+    z-index: -1;
+    margin-top: 200px;
+    margin-left: 300px;
 }
