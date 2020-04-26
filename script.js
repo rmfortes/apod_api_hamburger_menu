@@ -24,7 +24,6 @@ menuButton.addEventListener("click", menuClick);
 
 let handleClick = (e) => {
   e.preventDefault();
-  console.dir(e);
   console.log("hello")
 
 //   fetch(newURL)
@@ -51,7 +50,7 @@ let handleClick = (e) => {
 };
 
 
-document.querySelectorAll("button").addEventListener("click", handleClick);
+document.querySelector("button").addEventListener("click", handleClick);
 
 
 let explanation = document.querySelector(".explanation");
