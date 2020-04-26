@@ -18,19 +18,24 @@
     </header>
 
     <div class="apod">
-      <h1>Date</h1>
-      <h2>Title</h2>
-      <div>image</div>
-      <p>Explanation</p>
+      <h1 class="title">Title</h1>
+      <h2 class="date">Date</h2>
+      <div class=".visuals">visuals</div>
+      <p class="explanation">Explanation</p>
     </div>
 
     <aside>
-      <form class="menuContents">
-        <input type="submit" class="input" value="Today" />
-        <br /><input type="submit" class="input" value="March 2, 2020" />
-        <br /><input type="text" class="input" placeholder="YYYY-MM-DD" />
-        <input type="submit" class="input" value="Go" />
-      </form>
+      <div class="buttons">
+        <form>
+        <input type="button" class="today" value="Today" />
+        <br /><input
+          type="submit"
+          class="anniversary"
+          value="December 1, 2017"
+        />
+        <br /><input type="submit" class="startGA" /></form>
+      </div>
+    </aside>
     <footer></footer>
 
     <script src="script.js"></script>

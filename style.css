@@ -42,12 +42,18 @@ aside {
 }
 
 .menuContents {
-    border: solid red;
     width: 300px;
     display: block;
     margin-top: 250px;
     position: fixed;
     z-index: -1
+}
+
+.buttons {
+    border: solid red;
+    margin-top: 250px;
+    position: fixed;
+    z-index: 1
 }
 
 .bar1, .bar2, .bar3 {
@@ -64,4 +70,6 @@ aside {
     z-index: -1;
     margin-top: 200px;
     margin-left: 300px;
+    min-width: 50%;
+    min-height: 50%;
 }

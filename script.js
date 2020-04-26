@@ -1,88 +1,59 @@
-const url = 'https://api.nasa.gov/planetary/apod?api_key=xjgFw6a1av9NLLfgqi1a6AfHLlaGQxYw9LwMuUoW'
-const newURL = 'https://api.nasa.gov/planetary/apod?api_key=xjgFw6a1av9NLLfgqi1a6AfHLlaGQxYw9LwMuUoW&date='
+const url =
+"https://api.nasa.gov/planetary/apod?api_key="
+const key = "719YXr3TASuxKrprgLyxQhm1FASqUOz1LJTAhrLN"
+const newURL =
+  `https://api.nasa.gov/planetary/apod?api_key=${key}`;
 
-//each element
-let explanation = document.querySelector(".explanation");
-let todaybutton = document.querySelector(".todaybutton");
-let date = document.querySelector(".date");
-let visuals = document.querySelector(".visuals");
-let userInput = document.querySelector(".input").value;
 let aside = document.querySelector("aside");
 
-
 let menuClick = (e) => {
-    e.preventDefault();
-    e.target.menuButton;
-    console.dir(e);
+  e.preventDefault();
+  e.target.menuButton;
+  console.dir(e);
 
-    if (aside.style.display === "none") {
-        aside.style.display = "block";
-      } else {
-        aside.style.display = "none";
-      } 
-}
+  if (aside.style.display === "none") {
+    aside.style.display = "block";
+  } else {
+    aside.style.display = "none";
+  }
+};
 
 let menuButton = document.querySelector(".menuButton");
 menuButton.addEventListener("click", menuClick);
+let today = document.querySelector(".today");
 
 let handleClick = (e) => {
-    e.preventDefault();
-    console.dir(e);
+  e.preventDefault();
+  console.dir(e);
+  console.log("hello")
 
-    fetch(url)
-        .then(res => res.json())
-        .then(res => {
-            if (res.media_type = "video") {
-                let ifrm = document.createElement("iframe");
-                ifrm.setAttribute("src", res.url);
-                visuals.appendChild(ifrm);
-            } else {
-                let pic = document.createElement("image");
-                pic.setAttribute("src", res.url)
-                visuals.appendChild(pic);
-            }
-            date.innerHTML = res.date;
-            explanation.innerHTML = res.explanation;
-            visuals.setAttribute("src", res);
-            console.log(res);
-        })
+//   fetch(newURL)
+//     .then((res) => res.json())
+//     .then((res) => {
+//       if ((res.media_type = "video")) {
+//         let ifrm = document.createElement("iframe");
+//         ifrm.setAttribute("src", res.url);
+//         visuals.appendChild(ifrm);
+//       } else {
+//         let pic = document.createElement("image");
+//         pic.setAttribute("src", res.url);
+//         visuals.appendChild(pic);
+//       }
+//       date.innerHTML = res.date;
+//       explanation.innerHTML = res.explanation;
+//       visuals.setAttribute("src", res.url);
+//       console.log(res);
+//     })
 
-        .catch(err => {
-            console.log("Ground control to Major Tom?", err);
-        })
-}
+//     .catch((err) => {
+//       console.log("Ground control to Major Tom?", err);
+//     });
+};
 
-todaybutton.addEventListener("click", handleClick);
+today.addEventListener("submit", handleClick);
 
-let handleSubmit = (e) => {
-    e.preventDefault();
-    console.dir(e);
-    let fullUrl = newUrl+userInput;
-    console.log(fullURL);
+let explanation = document.querySelector(".explanation");
+let title = document.querySelector(".title");
 
-    fetch(fullUrl)
-    .then(res => res.json())
-    .then(res => {
-        if (res.media_type = "video") {
-            let ifrm = document.createElement("iframe");
-            ifrm.setAttribute("src", res.url);
-            visuals.appendChild(ifrm);
-        } else {
-            let pic = document.createElement("image");
-            pic.setAttribute("src", res.url)
-            visuals.appendChild(pic);
-        }
-        date.innerHTML = res.date;
-        explanation.innerHTML = res.explanation;
-        visuals.setAttribute("src", res.url);
-        console.log(res);
-    })
-
-    .catch(err => {
-        console.log("Ground control to Major Tom?", err);
-    })
-}
-
-let form = document.querySelector("form");
-let inputElement = document.querySelector(".input");
-form.addEventListener("submit", handleSubmit);
+let date = document.querySelector(".date");
+let visuals = document.querySelector(".visuals");
