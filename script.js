@@ -20,7 +20,7 @@ let menuClick = (e) => {
 
 let menuButton = document.querySelector(".menuButton");
 menuButton.addEventListener("click", menuClick);
-let today = document.querySelector(".today");
+
 
 let handleClick = (e) => {
   e.preventDefault();
@@ -50,7 +50,9 @@ let handleClick = (e) => {
 //     });
 };
 
-today.addEventListener("submit", handleClick);
+
+document.querySelectorAll("button").addEventListener("click", handleClick);
+
 
 let explanation = document.querySelector(".explanation");
 let title = document.querySelector(".title");
