@@ -28,9 +28,9 @@ header {
 
 
 aside {
-    height: 100vh;
+    height: 95vh;
     width: 300px;
-    position: fixed;
+    position: absolute;
     right: 0px;
     border-left: 1px solid #F2EDE8;
     display: none;
@@ -84,3 +84,10 @@ p, .visuals {
 .flexbox {
     display: flex;
 }
+
+@media screen and (max-width: 800px) {
+    .flexbox {
+        display: flex;
+        flex-direction: column;
+    }
+  }
