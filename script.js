@@ -1,10 +1,18 @@
-const url =
-"https://api.nasa.gov/planetary/apod?api_key="
-const key = "719YXr3TASuxKrprgLyxQhm1FASqUOz1LJTAhrLN"
-const newURL =
-  `https://api.nasa.gov/planetary/apod?api_key=${key}`;
+//API URL to fetch default(/today) button
+const URL = "https://api.nasa.gov/planetary/apod?api_key=";
+const key = "PnBgWXOOulAOFC02ZcE1Ve5VLz79FknpoBOcXcK7";
+const fullURL = `https://api.nasa.gov/planetary/apod?api_key=${key}`
 
-let aside = document.querySelector("aside");
+//API URLs to fetch data for remaining buttons
+const anniversaryDate = "2017-12-01"
+const startGaDate = "2020-03-02"
+const gromAdoption = "2018-08-24"
+const anniversaryURL = `${fullURL}${key}&date=${anniversaryDate}`;
+const adoptionURL = `${fullURL}${key}&date=${gromAdoption}`;
+const startURL = `${fullURL}${key}&date=${startGaDate}`;
+
+//this code identifies and assigns click event listeners to the hamburger menu & corresponding menu button
+const aside = document.querySelector("aside");
 
 let menuClick = (e) => {
   e.preventDefault();
@@ -21,40 +29,96 @@ let menuClick = (e) => {
 let menuButton = document.querySelector(".menuButton");
 menuButton.addEventListener("click", menuClick);
 
-
-let handleClick = (e) => {
+//this code adds event listeners and handles the API call for the button labeled "title"
+let todayClick = (e) => {
   e.preventDefault();
-  console.log("hello")
 
-//   fetch(newURL)
-//     .then((res) => res.json())
-//     .then((res) => {
-//       if ((res.media_type = "video")) {
-//         let ifrm = document.createElement("iframe");
-//         ifrm.setAttribute("src", res.url);
-//         visuals.appendChild(ifrm);
-//       } else {
-//         let pic = document.createElement("image");
-//         pic.setAttribute("src", res.url);
-//         visuals.appendChild(pic);
-//       }
-//       date.innerHTML = res.date;
-//       explanation.innerHTML = res.explanation;
-//       visuals.setAttribute("src", res.url);
-//       console.log(res);
-//     })
+  fetch(fullURL)
+    .then((res) => res.json())
+    .then((res) => {
+      console.log(res);
+      let visuals = document.querySelector(".visuals");
+      visuals.src = res.url;
+      date.innerHTML = res.date;
+      title.innerHTML = res.title;
+      explanation.innerHTML = res.explanation;
+    })
 
-//     .catch((err) => {
-//       console.log("Ground control to Major Tom?", err);
-//     });
+    .catch((err) => {
+      console.log("Ground control to Major Tom?", err);
+    });
 };
 
+document.querySelector(".today").addEventListener("click", todayClick);
 
-document.querySelector("button").addEventListener("click", handleClick);
+//this code adds event listeners and handles the API call for the button labeled "December 1, 2017"
+let anniversaryClick = (e) => {
+  e.preventDefault();
 
+  fetch(anniversaryURL)
+    .then((res) => res.json())
+    .then((res) => {
+      console.log(res);
+      let visuals = document.querySelector(".visuals");
+      visuals.src = res.url;
+      date.innerHTML = res.date;
+      title.innerHTML = res.title;
+      explanation.innerHTML = res.explanation;
+    })
 
-let explanation = document.querySelector(".explanation");
+    .catch((err) => {
+      console.log("Ground control to Major Tom?", err);
+    });
+};
+
+document.querySelector(".anniversary").addEventListener("click", anniversaryClick);
+
+//this code adds event listeners and handles the API call for the button labeled "August 24, 2018"
+let adoptionClick = (e) => {
+  e.preventDefault();
+
+  fetch(adoptionURL)
+    .then((res) => res.json())
+    .then((res) => {
+      console.log(res);
+      let visuals = document.querySelector(".visuals");
+      visuals.src = res.url;
+      date.innerHTML = res.date;
+      title.innerHTML = res.title;
+      explanation.innerHTML = res.explanation;
+    })
+
+    .catch((err) => {
+      console.log("Ground control to Major Tom?", err);
+    });
+};
+
+document.querySelector(".gromAdoption").addEventListener("click", adoptionClick);
+
+//this code adds event listeners and handles the API call for the button labeled "March 2, 2020"
+let startClick = (e) => {
+  e.preventDefault();
+
+  fetch(startURL)
+    .then((res) => res.json())
+    .then((res) => {
+      console.log(res);
+      let visuals = document.querySelector(".visuals");
+      visuals.src = res.url;
+      date.innerHTML = res.date;
+      title.innerHTML = res.title;
+      explanation.innerHTML = res.explanation;
+    })
+
+    .catch((err) => {
+      console.log("Ground control to Major Tom?", err);
+    });
+};
+
+document.querySelector(".startGA").addEventListener("click", startClick);
+
+//this code grabs elements as needed
 let title = document.querySelector(".title");
-
+let explanation = document.querySelector(".explanation");
 let date = document.querySelector(".date");
 let visuals = document.querySelector(".visuals");

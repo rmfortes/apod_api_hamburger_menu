@@ -67,11 +67,15 @@ aside {
   }  
 
 .apod {
-    border: solid red;
+
     position: fixed;
 
     margin-top: 200px;
     margin-left: 300px;
     min-width: 50%;
     min-height: 50%;
+}
+
+.visuals {
+    width: 400px;
 }
