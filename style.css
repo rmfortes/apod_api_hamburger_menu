@@ -14,7 +14,6 @@ header {
     position: fixed;
     border-bottom: 1px solid #F2EDE8;
     font-family: futura, sans-serif;
-
 }
 
 .menuButton {
@@ -45,16 +44,19 @@ aside {
 .menuContents {
     width: 300px;
     display: block;
-    margin-top: 250px;
+    margin-top: 150px;
     position: fixed;
 
 }
 
-.buttons {
-    border: solid red;
+button {
     margin-top: 250px;
     position: fixed;
-    z-index: 1
+    z-index: 1;
+    width: 300px;
+    font-family: futura, sans-serif;
+    font-size: 12px;
+    padding: 1px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -67,15 +69,29 @@ aside {
   }  
 
 .apod {
-
     position: fixed;
-
-    margin-top: 200px;
-    margin-left: 300px;
+    margin-top: 5%;
     min-width: 50%;
     min-height: 50%;
 }
 
-.visuals {
+h1, h2, p {
+    font-family: futura, sans-serif;
+}
+
+h2 {
+    color: #F2EDE8;
+}
+
+h1, p {
+    color: #444241;
+}
+
+p, .visuals {
     width: 400px;
+    padding: 30px
+}
+
+.flexbox {
+    display: flex;
 }
