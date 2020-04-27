@@ -1,15 +1,16 @@
 //API URL to fetch default(/today) button
-const URL = "https://api.nasa.gov/planetary/apod?api_key=";
-const key = "PnBgWXOOulAOFC02ZcE1Ve5VLz79FknpoBOcXcK7";
+const URL = `https://api.nasa.gov/planetary/apod?api_key=`;
+const key = `PnBgWXOOulAOFC02ZcE1Ve5VLz79FknpoBOcXcK7`;
 const fullURL = `https://api.nasa.gov/planetary/apod?api_key=${key}`
+const testing = `https://api.nasa.gov/planetary/apod?api_key=PnBgWXOOulAOFC02ZcE1Ve5VLz79FknpoBOcXcK7&date=1995-06-16`
 
 //API URLs to fetch data for remaining buttons
-const anniversaryDate = "2017-12-01"
-const startGaDate = "2020-03-02"
-const gromAdoption = "2018-08-24"
-const anniversaryURL = `${fullURL}${key}&date=${anniversaryDate}`;
-const adoptionURL = `${fullURL}${key}&date=${gromAdoption}`;
-const startURL = `${fullURL}${key}&date=${startGaDate}`;
+const anniversaryDate = `2017-12-01`
+const startGaDate = `2020-03-02`
+const gromAdoption = `2018-08-24`
+const anniversaryURL = `${URL}${key}&date=${anniversaryDate}`;
+const adoptionURL = `${URL}${key}&date=${gromAdoption}`;
+const startURL = `${URL}${key}&date=${startGaDate}`;
 
 //this code identifies and assigns click event listeners to the hamburger menu & corresponding menu button
 const aside = document.querySelector("aside");

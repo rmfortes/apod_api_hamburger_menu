@@ -2,7 +2,6 @@ body {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(#F3B5A7, #A7DBF3);
-
 }
 
 header {
@@ -11,19 +10,16 @@ header {
     display: flex;
     justify-content: space-between;;
     align-items: center;
-    position: fixed;
+    position: absolute;
     border-bottom: 1px solid #F2EDE8;
-    font-family: futura, sans-serif;
 }
 
 .menuButton {
     align-items: flex-end;
     height: fit-content;
     width: fit-content;
-    margin-right: 50px;
     color: #444241;
-
-    position: relative
+    margin-right: 50px;
 }
 
 /* .menuButton:hover {
@@ -38,25 +34,18 @@ aside {
     right: 0px;
     border-left: 1px solid #F2EDE8;
     display: none;
-
-}
-
-.menuContents {
-    width: 300px;
-    display: block;
-    margin-top: 150px;
-    position: fixed;
-
+    margin-top: 50px
 }
 
 button {
     margin-top: 250px;
     position: fixed;
-    z-index: 1;
     width: 300px;
     font-family: futura, sans-serif;
     font-size: 12px;
     padding: 1px;
+    background-color: #F2EDE8;
+    border: none
 }
 
 .bar1, .bar2, .bar3 {
@@ -65,7 +54,7 @@ button {
     margin: 2px 0;
     background-color: #444241;
     border-radius: 25px;
-    z-index: 0
+
   }  
 
 .apod {
